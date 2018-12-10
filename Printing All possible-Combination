@@ -1,0 +1,30 @@
+void combiUtility(int arr[],int i,int n,int data[],int index,int r)
+{
+	if(index==r)
+	{
+		for(int j=0;j<r;j++)
+		printf("%d ",data[j]);
+		printf("\n");
+		return;
+	}
+	if(i>=n)
+	return;
+	data[index]=arr[i];
+	combiUtility(arr,i+1,n,data,index+1,r);
+	while (arr[i] == arr[i+1])
+             i++; 
+	combiUtility(arr,i+1,n,data,index,r);
+}
+void combination(int arr[],int n,int r)
+{
+	int data[r];
+	combiUtility(arr,0,n,data,0,r);
+}
+int main()
+{
+	int arr[] = {1, 2, 3, 4, 5}; 
+    int r = 3; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+	combination(arr,n,r);
+	
+}
