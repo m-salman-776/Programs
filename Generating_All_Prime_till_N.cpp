@@ -1,4 +1,4 @@
-Sieve of Eratosthenes
+/*Sieve of Eratosthenes
 
 You can use the Sieve of Eratosthenes to find all the prime numbers that are less than or equal to a given number N or to find out whether a number is a prime number.
 
@@ -9,7 +9,11 @@ Pseudo code
 Mark all the numbers as prime numbers except 1
 Traverse over each prime numbers smaller than sqrt(N)
 For each prime number, mark its multiples as composite numbers
-Numbers, which are not the multiples of any number, will remain marked as prime number and others will change to composite numbers.
+Numbers, which are not the multiples of any number, will remain marked as prime number and others will change to composite numbers.*/
+
+
+
+
 void sieve(int N) {
         bool isPrime[N+1];
         for(int i = 0; i <= N;++i) {
@@ -27,7 +31,7 @@ void sieve(int N) {
     
     
     
-    Python Code:
+    /*Python Code:*/
       
       
       import math as m
