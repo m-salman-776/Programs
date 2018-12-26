@@ -37,3 +37,26 @@ int modularExponentiation(int x,int n,int M)
 
 /*Time complexity: O(log N)
 Memory complexity: O(log N) because a function call consumes memory and log N recursive function calls are made*/
+
+
+
+/*Or we can use yet another method for modular exponentiation given below*/
+
+int power(int a, unsigned int n, int p) 
+{ 
+	int res = 1;	 // Initialize result 
+	a = a % p; // Update 'a' if 'a' >= p 
+
+	while (n > 0) 
+	{ 
+		// If n is odd, multiply 'a' with result 
+		if (n & 1) 
+			res = (res*a) % p; 
+
+		// n must be even now 
+		n = n>>1; // n = n/2 
+		a = (a*a) % p; 
+	} 
+	return res; 
+} 
+
