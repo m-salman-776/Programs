@@ -1,23 +1,11 @@
 /*Optimized method
 
-While calculating , the basis of Binary Exponentiation relies on whether  is odd or even.
+While calculating , the basis of Binary Exponentiation relies on whether the power is odd or even.
 
-If  is even, then  can be broken down to . Programmatically, finding  is a one-step process. However, the problem is to find .
-
-Notice how the computation steps were reduced from  to  in just one step? You can continue to divide the power by  as long as it is even.
-
-When  is odd, try and convert it into an even value.  can be written as . This ensures that  is even.
-
-If  is even, replace  by .
-If  is odd, replace  by .  becomes even and you can apply the relevant formula.
-Example
-
+If  is even, replace  by  (x*x)^N/2
+If  is odd, replace  by x*fun(x*x)^(N-1)/2
 You are required to compute . The steps are as follows:
 
-The power of  is , which is even. Break it down as follows:
-Find . The power of  is , which is odd. Convert it into an even power and then apply the following formula:
- is a one-step computation process
-The result is .
 This is an efficient method and the ten-step process of determining  is reduced to a three-step process. At every step,  is divided by . Therefore, the time complexity is O(log N).
 
 The code for the process is as follows:*/
@@ -47,5 +35,5 @@ int modularExponentiation(int x,int n,int M)
 
 }
 
-Time complexity: O(log N)
-Memory complexity: O(log N) because a function call consumes memory and log N recursive function calls are made
+/*Time complexity: O(log N)
+Memory complexity: O(log N) because a function call consumes memory and log N recursive function calls are made*/
