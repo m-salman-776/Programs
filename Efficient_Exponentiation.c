@@ -1,4 +1,4 @@
-Optimized method
+/*Optimized method
 
 While calculating , the basis of Binary Exponentiation relies on whether  is odd or even.
 
@@ -20,7 +20,7 @@ Find . The power of  is , which is odd. Convert it into an even power and then a
 The result is .
 This is an efficient method and the ten-step process of determining  is reduced to a three-step process. At every step,  is divided by . Therefore, the time complexity is O(log N).
 
-The code for the process is as follows:
+The code for the process is as follows:*/
 
 int binaryExponentiation(int x,int n)
 {
@@ -33,8 +33,8 @@ int binaryExponentiation(int x,int n)
 }
 
 
-Some time we may require calculate only modulous of the exponet then we do not need to calculate whole thing to get modulous 
-we simple modify the code in following manner
+/*Some time we may require calculate only modulous of the exponet then we do not need to calculate whole thing to get modulous 
+we simple modify the code in following manner*/
 
 int modularExponentiation(int x,int n,int M)
 {
