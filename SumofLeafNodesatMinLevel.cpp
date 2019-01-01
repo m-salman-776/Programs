@@ -7,6 +7,37 @@ findVal() this function will recursively add all nodes of same height at its hei
 from this array we can get sum of all nodes till given height
 */
 
+pair<int,int> findValPair(Node* root,int n)
+{
+    if(root->left==NULL && root->right==NULL)
+    return {n,root->data};
+    else if(root->left==NULL)
+    return findValPair(root->right,n-1);
+    else if(root->right==NULL)
+    return findValPair(root->left,n-1);
+    else 
+    {
+        auto x=findValPair(root->left,n-1);
+        auto y=findValPair(root->right,n-1);
+        if(x.first==y.first)
+        return {x.first,x.second+y.second};
+        else if(x.first>y.first)
+        return x;
+        else return y;
+    }
+    
+    
+    /*
+    following lines are needed to be written in main function 
+    if(root==NULL)
+    return 0;
+    return findValPair(root,1000).second;
+    this implementation  does not need any extra space for
+    */
+    
+}
+
+
 void findVal(Node * root,int arr[],int maxHeight)
 {
     if(root->left==NULL && root->right==NULL)
