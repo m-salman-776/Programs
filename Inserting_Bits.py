@@ -31,4 +31,4 @@ left_mask=~0<<(j+1)
 right_mask=1<<i-1
 mask=left_mask | right_mask
 aligned_m=M<<i;
-print(N | aligned_m)
+print(N|aligned_m)
