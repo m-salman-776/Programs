@@ -10,7 +10,7 @@ from this array we can get sum of all nodes till given height
 pair<int,int> findValPair(Node* root,int n)
 {
     if(root->left==NULL && root->right==NULL)
-    return {n,root->data};
+    return make_pair(n,root->data);
     else if(root->left==NULL)
     return findValPair(root->right,n-1);
     else if(root->right==NULL)
@@ -20,7 +20,7 @@ pair<int,int> findValPair(Node* root,int n)
         auto x=findValPair(root->left,n-1);
         auto y=findValPair(root->right,n-1);
         if(x.first==y.first)
-        return {x.first,x.second+y.second};
+        return make_pair(x.first,x.second+y.second);
         else if(x.first>y.first)
         return x;
         else return y;
