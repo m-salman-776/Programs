@@ -1,0 +1,39 @@
+
+Following are the some common operation on some of most freqeutly use STL
+
+1.Vector
+    
+    reverse()
+    push_back(ele)
+    pop_back() only delete last element does not return any reference 
+    back() returns the reference to the last element of the vector
+    at(i) return the reference of element at  'i' th indext 
+    erase(i) remove element ith position from vector
+    erase(startpos , endpos)
+    
+    Modifiers:
+
+    assign() – It assigns new value to the vector elements by replacing old ones
+    push_back() – It push the elements into a vector from the back
+    pop_back() – It is used to pop or remove elements from a vector from the back.
+    insert() – It inserts new elements before the element at the specified position
+    erase() – It is used to remove elements from a container from the specified position or range.
+    swap() – It is used to swap the contents of one vector with another vector of same type and size.
+    clear() – It is used to remove all the elements of the vector container
+    emplace() – It extends the container by inserting new element at position
+    emplace_back() – It is used to insert a new element into the vector container, the new element is added to the end of the vector
+ 
+ 
+ 
+ 2.List : Frequent function used in list
+        
+        front() Return the value of first element of the list 
+        back() Return the value of last element of the list
+        push_front(val) pushes values at front
+        push_back(val) pushes val at back
+        pop_front() remove first element 
+        pop_back()  remove last element
+        
+        insert() – Inserts new elements in the list before the element at a specified position.
+        erase() – Removes a single element or a range of elements from the list
+        
