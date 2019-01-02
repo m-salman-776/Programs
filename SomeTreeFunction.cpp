@@ -83,6 +83,39 @@ Node * maxVal(Node * root)
     return root;
     return maxVal(root->right);
 }
+
+Node * deleteNode(Node * root,int val)
+{
+    if(root==NULL)
+    {
+        cout<<"Not fond!";
+        return NULL;
+    }
+    if(root->data > val)
+    root->left=deleteNode(root->left,val);
+    else if(root->data<val)
+    root->right=deleteNode(root->right,val);
+    else
+    {
+        if(root->left==NULL)
+        {
+            Node * temp=root->right;
+            free(root);
+            return temp;
+        }
+        else if(root->right==NULL)
+        {
+            Node *temp=root->left;
+            free(root);
+            return temp;
+        }
+        Node * temp=minVal(root->right);
+        root->data=temp->data;
+        root->right=deleteNode(root->right,temp->data);
+    }
+    return root;
+}
+
 int main() {
     struct Node * root=NULL;
     int arr[]={1,5,9,6,3,4,7,10,1,5,49,36,35,89,37,20,46};
